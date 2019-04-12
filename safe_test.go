@@ -10,7 +10,7 @@ import (
 	"time"
 
 	"github.com/deliveroo/assert-go"
-	"github.com/deliveroo/co-restaurants/pkg/safe"
+	"github.com/deliveroo/safe-go"
 )
 
 func ExampleDo() {
