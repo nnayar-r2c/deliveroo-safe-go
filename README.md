@@ -1,7 +1,7 @@
 # Package Safe
 
-[![CircleCI](https://circleci.com/gh/deliveroo/safe-go.svg?style=svg&circle-token=39d7b55dba74c18b3130d2c2a553aabc917f1695)](https://circleci.com/gh/deliveroo/lib-template-go)
-[![GoDoc](https://img.shields.io/badge/godoc-reference-5272B4.svg)](http://godoc.deliveroo.net/github.com/deliveroo/safe-go) 
+[![CircleCI](https://circleci.com/gh/deliveroo/safe-go/tree/master.svg?style=svg&circle-token=25175417b032a53cc407a1b1616d5a87813b9f8f)](https://circleci.com/gh/deliveroo/safe-go/tree/master)
+[![GoDoc](https://img.shields.io/badge/godoc-reference-5272B4.svg)](http://godoc.deliveroo.net/github.com/deliveroo/safe-go)
 
 Package safe provides helpers for gracefully handling panics in background
 goroutines.
