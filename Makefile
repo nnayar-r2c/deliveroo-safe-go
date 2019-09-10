@@ -18,7 +18,7 @@ lint: ## Lint the project with golangci-lint.
 .PHONY: setup
 setup:  ## Download dependencies.
 	@GOBIN=$(GOBIN) go mod download
-	@GOBIN=$(GOBIN) go get github.com/golangci/golangci-lint/cmd/golangci-lint@v1.17.1
+	@GOBIN=$(GOBIN) go get github.com/golangci/golangci-lint/cmd/golangci-lint@v1.18.0
 
 .PHONY: test
 test:  ## Run tests.
