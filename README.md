@@ -1,6 +1,6 @@
 # Package Safe
 
-[![CircleCI](https://circleci.com/gh/deliveroo/safe-go/tree/master.svg?style=svg&circle-token=25175417b032a53cc407a1b1616d5a87813b9f8f)](https://circleci.com/gh/deliveroo/safe-go/tree/master)
+[![CircleCI](https://img.shields.io/circleci/build/github/deliveroo/safe-go?token=25175417b032a53cc407a1b1616d5a87813b9f8f)](https://circleci.com/gh/deliveroo/safe-go/tree/master)
 [![GoDoc](https://img.shields.io/badge/godoc-reference-5272B4.svg)](http://godoc.deliveroo.net/github.com/deliveroo/safe-go)
 
 Package safe provides helpers for gracefully handling panics in background
