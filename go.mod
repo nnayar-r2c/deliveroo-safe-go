@@ -7,5 +7,5 @@ require (
 	github.com/google/go-cmp v0.2.0 // indirect
 	github.com/oliveagle/jsonpath v0.0.0-20180606110733-2e52cf6e6852 // indirect
 	github.com/pkg/errors v0.8.1
-	golang.org/x/sync v0.0.0-20190423024810-112230192c58
+	golang.org/x/sync v0.2.0
 )
