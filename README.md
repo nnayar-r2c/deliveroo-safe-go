@@ -1,6 +1,6 @@
 # safe-go
 
-[![CircleCI](https://img.shields.io/circleci/build/github/deliveroo/safe-go?token=25175417b032a53cc407a1b1616d5a87813b9f8f)](https://circleci.com/gh/deliveroo/safe-go/tree/master)
+[![CircleCI](https://dl.circleci.com/status-badge/img/gh/deliveroo/safe-go/tree/master.svg?style=svg&circle-token=f7e12d6f3e8ff0209024df7622f618cb1b6d5243)](https://dl.circleci.com/status-badge/redirect/gh/deliveroo/safe-go/tree/master)
 [![GoDoc](https://img.shields.io/badge/godoc-reference-5272B4.svg)](http://godoc.deliveroo.net/github.com/deliveroo/safe-go)
 
 safe-go provides helpers for writing concurrent code safely.
