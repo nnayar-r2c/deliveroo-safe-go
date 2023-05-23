@@ -11,14 +11,17 @@ all: install lint test
 install: ## Install the library.
 	@go install ./...
 
+GOLANGCI_LINT_VERSION=1.51.2
+$(GOBIN)/golangci-lint:
+	@sh .make/golangci-lint-install.sh $(GOBIN) $(GOLANGCI_LINT_VERSION)
+
 .PHONY: lint
-lint: ## Lint the project with golangci-lint.
+lint: $(GOBIN)/golangci-lint  ## Lint the project with golangci-lint.
 	@$(GOBIN)/golangci-lint run ./...
 
 .PHONY: setup
 setup:  ## Download dependencies.
 	@GOBIN=$(GOBIN) go mod download
-	@GOBIN=$(GOBIN) go get github.com/golangci/golangci-lint/cmd/golangci-lint@v1.18.0
 
 .PHONY: test
 test:  ## Run tests.

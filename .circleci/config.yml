@@ -2,27 +2,26 @@ version: 2
 jobs:
   build:
     docker:
-      - image: circleci/golang:1.13
-    working_directory: /go/src/github.com/deliveroo/safe-go
-
+      - image: cimg/go:1.20
     environment:
       TEST_RESULTS: /tmp/test-results
+      GOCACHE: "/mnt/ramdisk/.cache/go-build"
 
     steps:
       - checkout
       - run: mkdir -p $TEST_RESULTS
       - restore_cache:
           keys:
-            - v1-pkg-cache
+            - v1-build-cache
 
       - run: make setup
 
-      - run: go get github.com/jstemmer/go-junit-report
+      - run: GOBIN=$(pwd)/bin go install github.com/jstemmer/go-junit-report
 
       - run:
           name: Run unit tests
           command: |
-            trap "go-junit-report <${TEST_RESULTS}/go-test.out > ${TEST_RESULTS}/go-test-report.xml" EXIT
+            trap "./bin/go-junit-report <${TEST_RESULTS}/go-test.out > ${TEST_RESULTS}/go-test-report.xml" EXIT
             go test -v ./... | tee ${TEST_RESULTS}/go-test.out
 
       - run: make lint
@@ -30,9 +29,9 @@ jobs:
       - run: make install
 
       - save_cache:
-          key: v1-pkg-cache
+          key: v1-build-cache
           paths:
-            - "/go/pkg"
+            - /mnt/ramdisk/.cache/go-build
 
       - store_artifacts:
           path: /tmp/test-results
